@@ -10,4 +10,9 @@ class UsersController < ApplicationController
 
 	end
 
+	# def show
+	# 	@showuserprofile = User.all
+	# end
+
+
 end

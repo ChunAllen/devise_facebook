@@ -13,6 +13,10 @@ class User < ActiveRecord::Base
   validates_presence_of :name
   validates_uniqueness_of :name
 
+    has_attached_file :photo,
+:default_url => '/assets/default1.gif'
+
+
 	 def self.from_omniauth(auth)
 	  where(auth.slice(:provider, :uid)).first_or_create do |user|
 	    user.provider = auth.provider

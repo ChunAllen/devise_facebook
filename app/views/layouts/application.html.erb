@@ -26,7 +26,7 @@
 		        <div class="nav-collapse">
 		          <ul class="nav">
 		            <li><%= link_to "Home", root_path %></li>
-		            <li><%= link_to "Profile" %></li>
+		            <li><%= link_to "Profile", user_path(current_user.id) %></li>
 		            <li><%= link_to "Blog Network" %></li>
 		          
 		          </ul>
@@ -34,7 +34,7 @@
 
 		        <div class="btn-group pull-right">
 		        	<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-			              <i class="icon-user"></i> <%= current_user.name%>
+			              <i class="icon-user"></i> <%= current_user.fname + "  "+ current_user.lname %>
 			              <span class="caret"></span>
 			        </a>
 			        <ul class="dropdown-menu">
