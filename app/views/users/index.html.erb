@@ -1,2 +1,9 @@
-<h1>Welcome</h1>
+
+<%= render @users %>
+
+<br />
+<%= will_paginate(@users) %>
+<%= pageless(@users.total_pages, root_path) %>
+
+
 
