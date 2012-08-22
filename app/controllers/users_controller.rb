@@ -5,10 +5,10 @@ class UsersController < ApplicationController
 			
  
 			#dispaly all users except current user
-			@users = User.where("id != ?", current_user.id ).order("fname").paginate(:per_page => 10, :page => params[:page])
+			@showusers = User.where("id != ?", current_user.id ).order("fname").paginate(:per_page => 1, :page => params[:page])
 			  if request.xhr?
       			sleep(3) # make request a little bit slower to see loader :-)
-      			render :partial => @users
+      			render :partial => @showusers
     		  end
 
 		else
