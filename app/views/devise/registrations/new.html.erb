@@ -1,7 +1,10 @@
+
+<div class="row">
+  <div class="span6 offset3">
 <h2>Sign up</h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <%= render 'error_messages', object: f.object %>
 
   <div><label>Email</label>
   <%= f.email_field :email %></div>
@@ -28,4 +31,5 @@
   <div><%= f.submit "Sign up" , :class => "btn btn-large btn-primary" %></div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+</div>
+</div>

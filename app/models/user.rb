@@ -13,6 +13,11 @@ class User < ActiveRecord::Base
    # validates_presence_of :name
    # validates_uniqueness_of :name
    validates_uniqueness_of :username
+   validates_presence_of :username
+   validates_presence_of :email
+   validates_presence_of :password
+   validates_presence_of :fname
+   validates_presence_of :lname
 
     has_attached_file :photo,
 	:default_url => '/assets/default1.gif'

@@ -1,9 +1,8 @@
 
-		
-<h2>Sign in</h2>
 
-
-
+<div class="row">
+  <div class="span6 offset3">
+  	<h2>Sign in</h2>
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 	<%= f.label :email %>
   <%= f.email_field :email %>
@@ -19,3 +18,5 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+  </div>
+</div>
