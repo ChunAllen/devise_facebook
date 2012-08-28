@@ -1,0 +1,36 @@
+
+<div id="leftnav_container">
+		<div id="leftnav_inner_container">
+			<div id ="leftpic_container">
+			<%= link_to user_path(current_user.id) do %> <%= image_tag current_user.photo.url,:size=>"50x50"%> <%end%>
+			</div>
+			<div id="leftname_container">
+			<%= link_to user_path(current_user.id) do %><h3><%= current_user.fname + " " + current_user.lname %></h3><%end%>
+				View my profile
+			</div>
+		</div>
+
+
+		<div id="connections_containter">
+				
+				<div id="myposts">
+					<b>0</b>
+					<br/>
+					POSTS
+				</div>
+
+				<div id="following">
+					<b>0</b>
+					<br/>
+					FOLLOWING
+				</div>
+
+				<div id="followers">
+					<b>0</b>
+					<br/>
+					FOLLOWERS
+				</div>
+				
+		</div>	
+</div>
+	

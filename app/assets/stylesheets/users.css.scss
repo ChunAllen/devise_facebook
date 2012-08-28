@@ -35,6 +35,66 @@
 }
 
 
+#leftnav_container{
+	margin-left: 150px;
+	width:300px;
+	height: 300px;
+	border: 1px gray solid;
+	border-radius: 10px;
+}
+
+#leftnav_inner_container{
+	margin-left: 25px;
+	margin-top: 25px;
+	width: 245px;
+	
+	padding-bottom: 30px;
+}
+
+#leftname_container{
+	margin-left: 55px;
+	margin-top: -80px;
+
+}
+
+#leftpic_container{
+ 
+	padding-bottom: 25px;
+}
 
 
+#connections_containter{
+	margin-top:10px;
+	border-top:  1px solid gray;
+	border-bottom:  1px solid gray;
 
+	margin-left: 25px;
+	width: 255px;
+	height: 50px;
+}
+
+
+#myposts{
+	margin-top: 5px;
+	border-right: 1px solid gray;
+	width: 55px;
+}
+
+#following
+{
+	margin-top: 5px;
+	margin-left: 65px;
+	margin-top: -35px;
+	border-right: 1px solid gray;
+	padding-right: 5px;
+	width: 80px;
+}
+
+
+#followers
+{
+	margin-left: 160px;
+	margin-top: -36px;
+	
+	width: 80px;
+}
