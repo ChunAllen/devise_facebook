@@ -1,4 +1,23 @@
+<div id="profile_container">
 
+	<div id="profile_inner_container">	
+		<div id="profile_pic">
+		<%= image_tag current_user.photo.url,:size=>"150x150"%>
+		</div>
 
-<%= image_tag current_user.photo.url,:size=>"200x200" %>
-<h1><%= current_user.fname + " " + current_user.lname %></h1>
+		<div id="profile_name">
+		<h1><%= current_user.fname + " " + current_user.lname %></h1>
+		</div>
+	</div>
+
+	<div id="exp_inner_container">
+
+		<%= render 'addexp' %>
+		<div align="right">
+		<a  data-toggle="modal" href="#myModal" >Add Work Experience</a>
+		</div>
+		<%= render 'experiences/showexperience'%>
+		
+	<div>
+
+</div>

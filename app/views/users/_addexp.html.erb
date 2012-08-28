@@ -1,0 +1,48 @@
+<div class="modal hide" id="myModal">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">×</button>
+    <h3>Add Work Experience</h3>
+    
+  </div>
+  <div class="modal-body">
+
+   
+      <%= simple_form_for @addexp  do |addexp| %>
+
+         <%= addexp.input :company , :placeholder =>"Company ABC" %>
+         <%= addexp.hidden_field :user_id, :value => current_user.id %>
+         <%= addexp.input :title , :placeholder =>"Web Developer"%>
+         <%= addexp.input :location %>
+
+        <fieldset>
+          <legend>From</legend>
+         <label for="from_month">From Month</label>
+         <%= addexp.select :from_month, Month::MONTH %>
+
+         <%= addexp.input :from_year , :placeholder =>"1989"%>
+        </fieldset> 
+
+        <fieldset>
+          <legend>From</legend>
+         <label for="to_month">To Month</label>
+         <%= addexp.select :to_month, Month::MONTH %>
+
+         <%= addexp.input :to_year , :placeholder =>"1991"%>
+        </fieldset> 
+       
+          
+
+       
+       
+        <%= addexp.input :description, :placeholder =>"Tell something about your work..." %>
+
+        <div class="modal-footer">
+          
+        	 <%= link_to "Cancel", :class => 'btn'%> 
+            <%= addexp.submit nil, :class => 'btn btn-primary' %>  
+        </div>
+     
+      <%end%>
+    
+  </div>
+</div>

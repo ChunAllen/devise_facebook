@@ -22,6 +22,7 @@ class User < ActiveRecord::Base
     has_attached_file :photo,
 	:default_url => '/assets/default1.gif'
 
+	has_many :experiences
 
 	 def self.from_omniauth(auth)
 	  where(auth.slice(:provider, :uid)).first_or_create do |user|

@@ -1,0 +1,22 @@
+	
+
+	<fieldset>
+		<legend>Work Experience</legend>
+		<% @showexp.each do |showexp|%>
+			
+				<li>
+					<h4><%= showexp.title %></h4>
+					<%= link_to "Edit", editexperience_user_path(showexp) %> 
+					<%= link_to "Delete" , showexp ,:confirm => "Remove this experience from " + showexp.company + "?" ,  :method => :delete%>
+				</li>
+				
+				<ul>
+					<li><h5><%= showexp.company %></h5></li>
+						<ul>
+							<li><%= showexp.location %></li>
+						</ul>
+					<li><%= showexp.from_month + "  " + showexp.from_year.to_s %> to <%= showexp.from_month + " " + showexp.to_year.to_s %></li>
+					<li><%= showexp.description%></li>
+				</ul>
+		<%end%>
+	</fieldset>

@@ -1,0 +1,40 @@
+
+
+   
+      <%= simple_form_for @editexp  do |editexp| %>
+
+         <%= editexp.input :company , :placeholder =>"Company ABC" %>
+         <%= editexp.hidden_field :user_id, :value => current_user.id %>
+         <%= editexp.input :title , :placeholder =>"Web Developer"%>
+         <%= editexp.input :location %>
+
+        <fieldset>
+          <legend>From</legend>
+         <label for="from_month">From Month</label>
+         <%= editexp.select :from_month, Month::MONTH %>
+
+         <%= editexp.input :from_year , :placeholder =>"1989"%>
+        </fieldset> 
+
+        <fieldset>
+          <legend>From</legend>
+         <label for="to_month">To Month</label>
+         <%= editexp.select :to_month, Month::MONTH %>
+
+         <%= editexp.input :to_year , :placeholder =>"1991"%>
+        </fieldset> 
+       
+          
+
+       
+       
+        <%= editexp.input :description, :placeholder =>"Tell something about your work..." %>
+
+        <div class="modal-footer">
+          
+        	 <%= link_to "Cancel", user_path(current_user.id) %> 
+            <%= editexp.submit nil, :class => 'btn btn-primary' %>  
+        </div>
+     
+      <%end%>
+    

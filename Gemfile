@@ -10,6 +10,7 @@ gem 'devise'
 gem 'omniauth-facebook'
 gem 'paperclip'
 gem 'will_paginate'
+gem 'simple_form'
 
 gem 'jquery-rails'
 

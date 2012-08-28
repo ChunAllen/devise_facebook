@@ -6,9 +6,8 @@ html {
 	overflow-y: scroll;
 }
 
-body {
-	padding-top: 60px;
-}
+
+
 
 section {
 	overflow: auto;
@@ -28,9 +27,6 @@ textarea {
 
 /* typography */
 
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
-}
 
 h1 {
   font-size: 3em;
@@ -250,3 +246,15 @@ aside {
   }
 }
 
+#profile_container{
+  width: 300px;
+  border: 1px gray solid;
+  height: 100%;
+}
+
+#current_user_name
+{
+  
+  padding-left: 80px;
+  width: 150px;
+}
