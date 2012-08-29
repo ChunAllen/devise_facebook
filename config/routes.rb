@@ -10,7 +10,8 @@ DeviseFb::Application.routes.draw do
 
     resources :experiences 
 
-    resources :relationships
+    resources :relationships 
+    
    
 
   # The priority is based upon order of creation:

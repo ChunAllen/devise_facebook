@@ -1,3 +1,16 @@
-<%= render 'users/leftnav' %>
 
-<%= render 'following'%>
+
+<div id="results" style="margin:auto;">
+
+<%= render 'users/leftnav'%>
+
+<%= render :partial => "users/user", :collection => @showfollowing %>
+   
+<%= will_paginate(@showfollowing) %>
+<%= pageless(@showfollowing.total_pages, relationships_path ) %>
+
+</div>
+
+
+
+
