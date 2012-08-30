@@ -8,6 +8,11 @@ gem 'rails', '3.2.8'
 gem 'pg'
 gem 'devise'
 gem 'omniauth-facebook'
+
+
+gem 'omniauth'
+gem 'omniauth-linkedin'
+
 gem 'paperclip'
 gem 'will_paginate'
 gem 'simple_form'

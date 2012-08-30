@@ -1,21 +1,15 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :confirmable,
-  # :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :omniauthable
+  
+  devise :database_authenticatable, :registerable, :validatable,
+         :recoverable, :rememberable, :trackable,  :omniauthable
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :username,
    :provider, :uid, :name, :oauth_token, :oauth_expires_at, :fname, :lname, :user_type, :username
-  # attr_accessible :title, :body
 
-   # validates_presence_of :name
-   # validates_uniqueness_of :name
-   validates_uniqueness_of :username
-   validates_presence_of :username
-   validates_presence_of :email
-   validates_presence_of :password
+   validates :email, :uniqueness => { :case_sensitive => false }
+ 
+ 
    validates_presence_of :fname
    validates_presence_of :lname
 
@@ -28,11 +22,10 @@ class User < ActiveRecord::Base
 	  where(auth.slice(:provider, :uid)).first_or_create do |user|
 	    user.provider = auth.provider
 	    user.uid = auth.uid
-	    user.name = auth.info.name #for getting name from facebook and store it in signup
 	   	user.email2 = auth.info.email
+	   	user.email = auth.provider + " "+ auth.info.email
 	    user.fname = auth.info.first_name
 	    user.lname = auth.info.last_name
-	    user.username = auth.info.nickname #for username
 	  end
 	end
 
